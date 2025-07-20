@@ -63,13 +63,13 @@ function M.draw(buf, row, col_start, col_end, byteWidth, replaceWidth)
   end
 end
 
-local function print_row_colors(tbl)
+function print_row_colors(tbl)
   for _, new_entry in ipairs(tbl) do
     print(new_entry.col_start .. ',' .. new_entry.col_end .. ',' .. new_entry.color)
   end
 end
 
-local function remove_matching_entry(tbl, new_entry)
+function remove_matching_entry(tbl, new_entry)
   for i, current_entry in ipairs(tbl) do
     if current_entry.col_start == new_entry.col_start and current_entry.col_end == new_entry.col_end then
       table.remove(tbl, i)

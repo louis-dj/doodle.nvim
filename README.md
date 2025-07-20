@@ -12,7 +12,9 @@ _Neovim isin't all about productivity_
 {
   "louis-dj/doodle.nvim",
   config = function()
-    require("doodle").setup()
+    require("doodle").setup({
+        remap = "<leader>g" -- bring the canvas up
+    })
   end
 }
 ```
@@ -24,7 +26,9 @@ _Neovim isin't all about productivity_
 use({
   "louis-dj/doodle.nvim",
   config = function()
-    require("doodle").setup()
+    require("doodle").setup({
+        remap = "<leader>g" -- bring the canvas up
+    })
   end
 })
 ```

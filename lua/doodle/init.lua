@@ -8,7 +8,7 @@ local M = {
 }
 
 function M.setup(opts)
-  vim.api.nvim_set_keymap('n', '<leader>g', ':lua require("doodle").toggle()<CR>',
+  vim.api.nvim_set_keymap('n', opts.remap, ':lua require("doodle").toggle()<CR>',
     { noremap = true, silent = true })
 end
 
