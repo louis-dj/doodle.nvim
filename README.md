@@ -2,7 +2,7 @@
 
 _Neovim isin't all about productivity_
 
-// TODO: add vid
+![gif demo](doodle.gif)
 
 ## Installation
 
