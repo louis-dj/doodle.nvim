@@ -15,6 +15,7 @@ _Neovim isin't all about productivity_
     require("doodle").setup()
   end
 }
+```
 
 
 ### [packer.nvim](https://github.com/wbthomason/packer.nvim)
@@ -26,3 +27,4 @@ use({
     require("doodle").setup()
   end
 })
+```
