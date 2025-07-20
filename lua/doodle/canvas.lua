@@ -111,6 +111,7 @@ function M.reset_canvas()
     table.insert(lines, string.rep(" ", width))
   end
   vim.api.nvim_buf_set_lines(M.buf, 0, -1, false, lines)
+  colors.clear_colors()
 end
 
 function M.check_bounds(row, col)

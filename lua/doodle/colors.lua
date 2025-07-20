@@ -16,6 +16,7 @@ function M.register()
   vim.api.nvim_set_hl(0, "green", { fg = "#55FF55" })
   vim.api.nvim_set_hl(0, "blue", { fg = "#5555FF" })
   vim.api.nvim_set_hl(0, "black", { fg = "#000000" })
+  M.update_color("neutral")
 end
 
 function M.update_color(new_color)
@@ -25,6 +26,10 @@ end
 
 function M.get_pen_color()
   return M.color
+end
+
+function M.clear_colors()
+  M.current_colors = {}
 end
 
 function M.draw(buf, row, col_start, col_end, byteWidth, replaceWidth)
@@ -58,13 +63,13 @@ function M.draw(buf, row, col_start, col_end, byteWidth, replaceWidth)
   end
 end
 
-function print_row_colors(tbl)
+local function print_row_colors(tbl)
   for _, new_entry in ipairs(tbl) do
     print(new_entry.col_start .. ',' .. new_entry.col_end .. ',' .. new_entry.color)
   end
 end
 
-function remove_matching_entry(tbl, new_entry)
+local function remove_matching_entry(tbl, new_entry)
   for i, current_entry in ipairs(tbl) do
     if current_entry.col_start == new_entry.col_start and current_entry.col_end == new_entry.col_end then
       table.remove(tbl, i)
