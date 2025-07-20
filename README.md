@@ -1,6 +1,6 @@
 # doodle.nvim
 
-_Neovim isin't all about productivity_
+_Neovim isn't all about productivity_
 
 ![gif demo](doodle.gif)
 
